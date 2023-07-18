@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">birthday-card</string>
+    <string name="wish_text">Happy Birthday, Shukrani !</string>
+    <string name="author">From: Chrinovic MM</string>
 </resources>

@@ -17,8 +17,11 @@ import androidx.compose.ui.unit.sp
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.padding
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.unit.dp
 import com.example.birthday_card.ui.theme.BirthdaycardTheme
 
 class MainActivity : ComponentActivity() {
@@ -31,7 +34,7 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    BirthdayGreetingWithImage("Happy Birthday Shukrani !", "From: Chrinovic MM")
+                    BirthdayGreetingWithImage(stringResource(R.string.wish_text), stringResource(R.string.author))
                 }
             }
         }
@@ -45,16 +48,18 @@ fun BirthdayGreetingWithText(
     modifier: Modifier = Modifier) {
     Column(
         modifier = Modifier.fillMaxSize(),
-        verticalArrangement = Arrangement.Top,
+        verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally
     ){
         Text(
             text = message,
-            fontSize = 20.sp
+            fontSize = 20.sp,
+            modifier = Modifier.padding(top= 16.dp)
         )
         Text(
             text = from,
-            fontSize = 10.sp
+            fontSize = 10.sp,
+            modifier = Modifier.padding(top= 16.dp)
         )
     }
 
